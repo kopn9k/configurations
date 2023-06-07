@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: postgres
-    url: jdbc:postgresql://database:5432/ostock_dev
+    url: jdbc:postgresql://database:5432/ostock_dev1
     password: postgres
 example:
   property: I AM DEV
