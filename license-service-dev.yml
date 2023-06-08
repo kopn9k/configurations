@@ -4,4 +4,4 @@ spring:
     url: jdbc:postgresql://database:5432/ostock_dev
     password: '{cipher}ba848cec19ee794148801e8b41f43227567c5cd14387a116d6a72c8405716ac4'
 example:
-  property: I AM DEV
+  property: I AM DEV property
