@@ -27,3 +27,13 @@ spring:
     driverClassName: org.postgresql.Driver
 example:
   property: I AM THE DEFAULT
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: defaultZone
+
