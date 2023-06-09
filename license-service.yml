@@ -51,13 +51,14 @@ resilience4j.circuitbreaker:
       slidingWindowType: COUNT_BASED
       permittedNumberOfCallsInHalfOpenState: 4
       minimumNumberOfCalls: 10
-      waitDurationInOpenState: 5s
+      waitDurationInOpenState: 15s
       slowCallRateThreshold: 50
       slowCallDurationThreshold: 10
       failureRateThreshold: 20
     organizationService:
       registerHealthIndicator: true
-      ringBufferSizeInClosedState: 6
-      ringBufferSizeInHalfOpenState: 4
+      slidingWindowSize: 10
+      slidingWindowType: COUNT_BASED
+      permittedNumberOfCallsInHalfOpenState: 4
       waitDurationInOpenState: 20s
       failureRateThreshold: 60
