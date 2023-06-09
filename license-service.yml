@@ -10,6 +10,9 @@ management:
       show-values: always
     env:
       show-values: ALWAYS
+  health:
+    circuitbreakers:
+      enabled: true
 
 server:
   port: 8080
@@ -40,3 +43,15 @@ eureka:
     serviceUrl:
       defaultZone: http://eurekaserver:8070/eureka/
 
+resilience4j.circuitbreaker:
+  instances:
+    licenseService:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      slidingWindowType: COUNT_BASED
+      permittedNumberOfCallsInHalfOpenState: 4
+      minimumNumberOfCalls: 10
+      waitDurationInOpenState: 5s
+      slowCallRateThreshold: 50
+      slowCallDurationThreshold: 10
+      failureRateThreshold: 20
