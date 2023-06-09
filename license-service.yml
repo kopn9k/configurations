@@ -55,3 +55,9 @@ resilience4j.circuitbreaker:
       slowCallRateThreshold: 50
       slowCallDurationThreshold: 10
       failureRateThreshold: 20
+    organizationService:
+      registerHealthIndicator: true
+      ringBufferSizeInClosedState: 6
+      ringBufferSizeInHalfOpenState: 4
+      waitDurationInOpenState: 20s
+      failureRateThreshold: 60
