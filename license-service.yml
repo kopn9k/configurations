@@ -84,3 +84,10 @@ resilience4j.retry:
       waitDuration: 2s
       retryExceptions:
         - java.util.concurrent.TimeoutException
+
+resilience4j.ratelimiter:
+  instances:
+   ratelicenseService:
+      limitForPeriod: 5
+      limitRefreshPeriod: 5000
+      timeoutDuration: 1000ms
