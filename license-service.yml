@@ -79,7 +79,7 @@ resilience4j.thread-pool-bulkhead:
 resilience4j.retry:
   instances:
     retryLicenseService:
-      maxRetryAttempts: 5
-      waitDuration: 10000
+      maxRetryAttempts: 3
+      waitDuration: 2s
       retry-exceptions:
-        - java.util.concurrent.TimeoutException
+        - java.lang.Exception
