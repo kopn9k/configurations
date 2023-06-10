@@ -69,10 +69,17 @@ resilience4j.bulkhead:
       maxWaitDuration: 2ms
       maxConcurrentCalls: 20
 
-
 resilience4j.thread-pool-bulkhead:
   instances:
     bulkheadLicenseService:
       maxThreadPoolSize: 2
       coreThreadPoolSize: 1
       queueCapacity: 2
+
+resilience4j.retry:
+  instances:
+    retryLicenseService:
+      maxRetryAttempts: 5
+      waitDuration: 10000
+      retry-exceptions:
+        - java.util.concurrent.TimeoutException
