@@ -87,7 +87,7 @@ resilience4j.retry:
 
 resilience4j.ratelimiter:
   instances:
-   ratelicenseService:
+   rateLicenseService:
       limitForPeriod: 5
       limitRefreshPeriod: 5000
       timeoutDuration: 1000ms
