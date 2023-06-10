@@ -75,11 +75,12 @@ resilience4j.thread-pool-bulkhead:
       maxThreadPoolSize: 2
       coreThreadPoolSize: 1
       queueCapacity: 2
+      writableStackTraceEnabled: true
 
 resilience4j.retry:
   instances:
     retryLicenseService:
-      maxRetryAttempts: 3
+      maxAttempts: 3
       waitDuration: 2s
-      retry-exceptions:
-        - java.lang.Exception
+      retryExceptions:
+        - java.util.concurrent.TimeoutException
