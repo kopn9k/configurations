@@ -21,3 +21,11 @@ logging:
     com.netflix: WARN
     org.springframework.web: WARN
     com.pasha: DEBUG
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
