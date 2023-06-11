@@ -30,3 +30,16 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
+      routes:
+        - id: organization-service
+          uri: lb://organization-service
+          predicates:
+          - Path=/organization/**
+          filters:
+          - RewritePath=/organization/(?<path>.*), /$\{path}
+        - id: license-service
+          uri: lb://license-service
+          predicates:
+          - Path=/license/**
+          filters:
+          - RewritePath=/license/(?<path>.*), /$\{path}
