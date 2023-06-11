@@ -26,19 +26,15 @@ logging:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
-      routes:
+        routes:
         - id: organization-service
           uri: lb://organization-service
           predicates:
           - Path=/organization/**
           filters:
           - RewritePath=/organization/(?<path>.*), /$\{path}
-        - id: license-service
-          uri: lb://license-service
+        - id: licensing-service
+          uri: lb://licensing-service
           predicates:
           - Path=/license/**
           filters:
