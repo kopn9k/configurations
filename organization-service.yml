@@ -14,6 +14,11 @@ management:
 server:
   port: 8081
 
+logging:
+  level:
+      org.springframework.web: WARN
+      com.pasha: DEBUG
+
 spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
