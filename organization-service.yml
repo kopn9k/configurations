@@ -33,6 +33,12 @@ spring:
     platform: postgres
   database:
     driverClassName: org.postgresql.Driver
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+
 example:
   property: I AM THE DEFAULT
 
