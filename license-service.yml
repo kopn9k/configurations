@@ -36,6 +36,17 @@ spring:
     platform: postgres
   database:
     driverClassName: org.postgresql.Driver
+  cloud:
+    stream:
+      bindings:
+        logger-in-0:
+          destination: orgChangeTopic
+          group: licensingGroup
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: kafka:9092
+
 example:
   property: I AM THE DEFAULT
 
