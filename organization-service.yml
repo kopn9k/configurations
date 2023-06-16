@@ -10,6 +10,9 @@ management:
       show-values: always
     env:
       show-values: ALWAYS
+  tracing:
+    sampling:
+      probability: 1.0
 
 server:
   port: 8081
@@ -18,6 +21,8 @@ logging:
   level:
       org.springframework.web: WARN
       com.pasha: DEBUG
+  pattern:
+    level : "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 spring:
   jpa:
@@ -38,6 +43,7 @@ spring:
       kafka:
         binder:
           brokers: kafka:9092
+          enable-observation: true
 
 example:
   property: I AM THE DEFAULT

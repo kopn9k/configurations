@@ -13,11 +13,17 @@ management:
   health:
     circuitbreakers:
       enabled: true
+  tracing:
+    sampling:
+      probability: 1.0
+
 
 logging:
   level:
       org.springframework.web: WARN
       com.pasha: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 server:
   port: 8080
@@ -46,8 +52,10 @@ spring:
       kafka:
         binder:
           brokers: kafka:9092
+          enable-observation: true
     function:
       definition: logger
+
 example:
   property: I AM THE DEFAULT
 
