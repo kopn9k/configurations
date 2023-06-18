@@ -4,6 +4,9 @@ management:
       exposure:
         include: '*'
     enabled-by-default: 'true'
+  tracing:
+    sampling:
+      probability: 1.0
 
 server:
   port: 8072
@@ -22,6 +25,8 @@ logging:
     com.netflix: WARN
     org.springframework.web: WARN
     com.pasha: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 spring:
   cloud:
