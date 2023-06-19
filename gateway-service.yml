@@ -7,6 +7,9 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
 
 server:
   port: 8072
@@ -44,3 +47,6 @@ spring:
           - Path=/license/**
           filters:
           - RewritePath=/license/(?<path>.*), /$\{path}
+  jackson:
+    serialization:
+      indent-output: true

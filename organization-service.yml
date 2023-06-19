@@ -13,6 +13,9 @@ management:
   tracing:
     sampling:
       probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
 
 server:
   port: 8081
@@ -44,6 +47,9 @@ spring:
         binder:
           brokers: kafka:9092
           enable-observation: true
+  jackson:
+    serialization:
+      indent-output: true
 
 example:
   property: I AM THE DEFAULT
