@@ -26,6 +26,7 @@ logging:
       com.pasha: DEBUG
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  config: classpath:logback-spring.xml
 
 server:
   port: 8080
