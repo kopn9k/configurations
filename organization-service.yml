@@ -15,7 +15,7 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://zipkin:9411/api/v2/spans
+      endpoint: http://54.72.158.137:9411/api/v2/spans
 
 server:
   port: 8081
@@ -26,6 +26,7 @@ logging:
       com.pasha: DEBUG
   pattern:
     level : "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  config: classpath:logback-spring.xml
 
 spring:
   jpa:
@@ -54,7 +55,7 @@ spring:
 example:
   property: I AM THE DEFAULT
 
-logstash.host: logstash:5000
+logstash.host: 54.72.158.137:5000
 
 eureka:
   instance:
