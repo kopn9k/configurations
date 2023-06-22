@@ -9,9 +9,9 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://34.246.177.63:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
 
-logstash.host: 34.246.177.63:5000
+logstash.host: logstash:5000
 
 server:
   port: 8072
@@ -32,7 +32,6 @@ logging:
     com.pasha: DEBUG
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-  config: classpath:logback-spring.xml
 
 spring:
   cloud:
