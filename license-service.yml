@@ -54,7 +54,7 @@ spring:
           content-type: application/json
       kafka:
         binder:
-          brokers: kafka.default.svc.cluster.local:9092
+          brokers: 34.251.221.109:9092
           enable-observation: true
     function:
       definition: logger
