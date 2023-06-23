@@ -46,7 +46,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: kafka-0:9092
+          brokers: kafka-headless:9092
           enable-observation: true
   jackson:
     serialization:
