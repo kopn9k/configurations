@@ -15,7 +15,7 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://54.72.158.137:9411/api/v2/spans
+      endpoint: http://3.252.157.221:9411/api/v2/spans
 
 server:
   port: 8081
@@ -55,7 +55,7 @@ spring:
 example:
   property: I AM THE DEFAULT
 
-logstash.host: 54.72.158.137:5000
+logstash.host: 3.252.157.221:5000
 
 eureka:
   instance:
