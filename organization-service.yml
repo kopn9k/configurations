@@ -15,7 +15,7 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://3.252.157.221:9411/api/v2/spans
+      endpoint: http://3.250.24.95:9411/api/v2/spans
 
 server:
   port: 8081
@@ -46,7 +46,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: 34.251.221.109:9092
+          brokers: kafka:9092
           enable-observation: true
   jackson:
     serialization:
@@ -55,7 +55,7 @@ spring:
 example:
   property: I AM THE DEFAULT
 
-logstash.host: 3.252.157.221:5000
+logstash.host: 3.250.24.95:5000
 
 eureka:
   instance:
