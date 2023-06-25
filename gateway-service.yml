@@ -9,9 +9,9 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://3.250.24.95:9411/api/v2/spans
+      endpoint: http://54.216.240.236:9411/api/v2/spans
 
-logstash.host: 3.250.24.95:5000
+logstash.host: 54.216.240.236:5000
 
 server:
   port: 8072
