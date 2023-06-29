@@ -62,7 +62,7 @@ spring:
     serialization:
       indent-output: true
 
-logstash.host: localhost:5000
+logstash.host: logstash:5000
 
 example:
   property: I AM THE DEFAULT
