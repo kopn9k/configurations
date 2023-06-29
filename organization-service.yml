@@ -55,7 +55,7 @@ spring:
 example:
   property: I AM THE DEFAULT
 
-logstash.host: zipkin:5000
+logstash.host: localhost:5000
 
 eureka:
   instance:
