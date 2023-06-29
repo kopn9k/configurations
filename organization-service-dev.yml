@@ -1,6 +1,6 @@
 spring:
   datasource:
     username: postgres
-    url: jdbc:postgresql://postgres-service:5432/postgres?sslmode=disable
-    password: '{cipher}ea172133fa9031358b08c827b2a4f55ba0afca2fe63263216db549f10abee00c'
+    url: jdbc:postgresql://database:5432/ostock_dev
+    password: '{cipher}ba848cec19ee794148801e8b41f43227567c5cd14387a116d6a72c8405716ac4'
 

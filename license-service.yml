@@ -18,7 +18,7 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://54.216.240.236:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
 
 logging:
   level:
@@ -62,13 +62,13 @@ spring:
     serialization:
       indent-output: true
 
-logstash.host: 54.216.240.236:5000
+logstash.host: zipkin:5000
 
 example:
   property: I AM THE DEFAULT
 
 redis:
-  server: ogrowth-redis.k1urb9.ng.0001.euw1.cache.amazonaws.com
+  server: redis
   port: "6379"
 
 eureka:
